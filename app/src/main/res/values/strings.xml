@@ -6,4 +6,11 @@
     <string name="tv_test1">我在学习Android!</string>
     <string name="tv_test2">筛选</string>
     <string name="tv_test3">我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!</string>
+
+    <!--ButtonActivity-->
+    <string name="btn_button_1">按钮1</string>
+    <string name="btn_button_2">按钮2</string>
+    <string name="btn_button_3">按钮3</string>
+    <string name="btn_button_4">按钮4</string>
+    <string name="tv_button_1">文字1</string>
 </resources>

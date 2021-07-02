@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.hsiung.androidlearn.ui.ButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
 
 public class UIFragment extends Fragment {
@@ -25,6 +26,7 @@ public class UIFragment extends Fragment {
     private Context mContext;
 
     private Button mBtnTextView;
+    private Button mBtnButton;
 
     public UIFragment() {
     }
@@ -57,7 +59,8 @@ public class UIFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mBtnTextView = view.findViewById(R.id.btn_textView);
+        mBtnTextView = view.findViewById(R.id.btn_text_View);
+        mBtnButton = view.findViewById(R.id.btn_button);
 
         setListener();
     }
@@ -71,6 +74,7 @@ public class UIFragment extends Fragment {
     private void setListener() {
         OnClick onClick = new OnClick();
         mBtnTextView.setOnClickListener(onClick);
+        mBtnButton.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -78,9 +82,12 @@ public class UIFragment extends Fragment {
         public void onClick(View v) {
             int id = v.getId();
             Intent intent = null;
-            if (id == R.id.btn_textView) {
+            if (id == R.id.btn_text_View) {
                 // 跳转到TextView演示界面
                 intent = new Intent(mContext, TextViewActivity.class);
+            } else  if (id == R.id.btn_button) {
+                // 跳转到Button演示界面
+                intent = new Intent(mContext, ButtonActivity.class);
             }
             startActivity(intent);
         }
