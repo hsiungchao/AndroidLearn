@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidLearn</string>
+    <string name="ui">UI</string>
+
+    <!--TextViewActivity-->
+    <string name="tv_test1">我在学习Android!</string>
+    <string name="tv_test2">筛选</string>
+    <string name="tv_test3">我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!我在学习Android!</string>
+</resources>

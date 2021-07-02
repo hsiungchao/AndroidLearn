@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_ui"
+        android:icon="@drawable/ic_ui"
+        android:title="UI" />
+
+    <item
+        android:id="@+id/nav_event"
+        android:icon="@drawable/ic_event"
+        android:title="Event" />
+
+    <item
+        android:id="@+id/nav_third_party_lab"
+        android:icon="@drawable/ic_third_party_lab"
+        android:title="ThirdPartyLab" />
+
+</menu>
