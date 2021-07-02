@@ -13,4 +13,9 @@
     <string name="btn_button_3">按钮3</string>
     <string name="btn_button_4">按钮4</string>
     <string name="tv_button_1">文字1</string>
+
+    <!--EditTextActivity-->
+    <string name="et_username">用户名</string>
+    <string name="et_password">密码</string>
+    <string name="btn_login">登录</string>
 </resources>

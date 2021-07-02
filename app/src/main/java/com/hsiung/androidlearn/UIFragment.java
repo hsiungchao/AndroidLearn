@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.hsiung.androidlearn.ui.ButtonActivity;
+import com.hsiung.androidlearn.ui.EditTextActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
 
 public class UIFragment extends Fragment {
@@ -27,6 +28,7 @@ public class UIFragment extends Fragment {
 
     private Button mBtnTextView;
     private Button mBtnButton;
+    private Button mBtnEditText;
 
     public UIFragment() {
     }
@@ -61,6 +63,7 @@ public class UIFragment extends Fragment {
 
         mBtnTextView = view.findViewById(R.id.btn_text_View);
         mBtnButton = view.findViewById(R.id.btn_button);
+        mBtnEditText = view.findViewById(R.id.btn_edit_text);
 
         setListener();
     }
@@ -75,6 +78,7 @@ public class UIFragment extends Fragment {
         OnClick onClick = new OnClick();
         mBtnTextView.setOnClickListener(onClick);
         mBtnButton.setOnClickListener(onClick);
+        mBtnEditText.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -88,6 +92,9 @@ public class UIFragment extends Fragment {
             } else  if (id == R.id.btn_button) {
                 // 跳转到Button演示界面
                 intent = new Intent(mContext, ButtonActivity.class);
+            } else if (id == R.id.btn_edit_text){
+                // 跳转到EditText演示界面
+                intent = new Intent(mContext, EditTextActivity.class);
             }
             startActivity(intent);
         }
