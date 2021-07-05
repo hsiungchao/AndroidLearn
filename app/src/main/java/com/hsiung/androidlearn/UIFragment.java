@@ -16,6 +16,8 @@ import android.widget.Button;
 import com.hsiung.androidlearn.ui.ButtonActivity;
 import com.hsiung.androidlearn.ui.CheckBoxActivity;
 import com.hsiung.androidlearn.ui.EditTextActivity;
+import com.hsiung.androidlearn.ui.ImageViewActivity;
+import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.RadioButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
 
@@ -33,6 +35,8 @@ public class UIFragment extends Fragment {
     private Button mBtnEditText;
     private Button mBtnRadioButton;
     private Button mBtnCheckBox;
+    private Button mBtnImageView;
+    private Button mBtnListView;
 
     public UIFragment() {
     }
@@ -70,6 +74,8 @@ public class UIFragment extends Fragment {
         mBtnEditText = view.findViewById(R.id.btn_edit_text);
         mBtnRadioButton = view.findViewById(R.id.btn_radio_button);
         mBtnCheckBox = view.findViewById(R.id.btn_check_box);
+        mBtnImageView = view.findViewById(R.id.btn_image_view);
+        mBtnListView = view.findViewById(R.id.btn_list_view);
 
         setListener();
     }
@@ -87,6 +93,8 @@ public class UIFragment extends Fragment {
         mBtnEditText.setOnClickListener(onClick);
         mBtnRadioButton.setOnClickListener(onClick);
         mBtnCheckBox.setOnClickListener(onClick);
+        mBtnImageView.setOnClickListener(onClick);
+        mBtnListView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -109,6 +117,12 @@ public class UIFragment extends Fragment {
             } else  if (id == R.id.btn_check_box) {
                 // 跳转到CheckBox演示界面
                 intent = new Intent(mContext, CheckBoxActivity.class);
+            } else if (id == R.id.btn_image_view) {
+                // 跳转到ImageView演示界面
+                intent = new Intent(mContext, ImageViewActivity.class);
+            } else if (id == R.id.btn_list_view) {
+                // 跳转到ListView演示界面
+                intent = new Intent(mContext, ListViewActivity.class);
             }
             startActivity(intent);
         }
