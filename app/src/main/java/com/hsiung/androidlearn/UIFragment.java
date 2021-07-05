@@ -15,6 +15,7 @@ import android.widget.Button;
 
 import com.hsiung.androidlearn.ui.ButtonActivity;
 import com.hsiung.androidlearn.ui.EditTextActivity;
+import com.hsiung.androidlearn.ui.RadioButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
 
 public class UIFragment extends Fragment {
@@ -29,6 +30,7 @@ public class UIFragment extends Fragment {
     private Button mBtnTextView;
     private Button mBtnButton;
     private Button mBtnEditText;
+    private Button mBtnRadioButton;
 
     public UIFragment() {
     }
@@ -64,6 +66,7 @@ public class UIFragment extends Fragment {
         mBtnTextView = view.findViewById(R.id.btn_text_View);
         mBtnButton = view.findViewById(R.id.btn_button);
         mBtnEditText = view.findViewById(R.id.btn_edit_text);
+        mBtnRadioButton = view.findViewById(R.id.btn_radio_button);
 
         setListener();
     }
@@ -79,6 +82,7 @@ public class UIFragment extends Fragment {
         mBtnTextView.setOnClickListener(onClick);
         mBtnButton.setOnClickListener(onClick);
         mBtnEditText.setOnClickListener(onClick);
+        mBtnRadioButton.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -95,6 +99,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_edit_text){
                 // 跳转到EditText演示界面
                 intent = new Intent(mContext, EditTextActivity.class);
+            } else if (id == R.id.btn_radio_button) {
+                // 跳转到RadioButton演示界面
+                intent = new Intent(mContext, RadioButtonActivity.class);
             }
             startActivity(intent);
         }

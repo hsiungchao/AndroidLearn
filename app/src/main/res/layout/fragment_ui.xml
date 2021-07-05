@@ -35,6 +35,13 @@
                 android:text="EditText"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 

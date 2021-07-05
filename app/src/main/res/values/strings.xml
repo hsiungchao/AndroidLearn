@@ -18,4 +18,9 @@
     <string name="et_username">用户名</string>
     <string name="et_password">密码</string>
     <string name="btn_login">登录</string>
+
+    <!--RadioButtonActivity-->
+    <string name="rb_male">男</string>
+    <string name="rb_female">女</string>
+
 </resources>
