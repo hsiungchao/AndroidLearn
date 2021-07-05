@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.hsiung.androidlearn.ui.ButtonActivity;
+import com.hsiung.androidlearn.ui.CheckBoxActivity;
 import com.hsiung.androidlearn.ui.EditTextActivity;
 import com.hsiung.androidlearn.ui.RadioButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
@@ -31,6 +32,7 @@ public class UIFragment extends Fragment {
     private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnRadioButton;
+    private Button mBtnCheckBox;
 
     public UIFragment() {
     }
@@ -67,6 +69,7 @@ public class UIFragment extends Fragment {
         mBtnButton = view.findViewById(R.id.btn_button);
         mBtnEditText = view.findViewById(R.id.btn_edit_text);
         mBtnRadioButton = view.findViewById(R.id.btn_radio_button);
+        mBtnCheckBox = view.findViewById(R.id.btn_check_box);
 
         setListener();
     }
@@ -83,6 +86,7 @@ public class UIFragment extends Fragment {
         mBtnButton.setOnClickListener(onClick);
         mBtnEditText.setOnClickListener(onClick);
         mBtnRadioButton.setOnClickListener(onClick);
+        mBtnCheckBox.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -102,6 +106,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_radio_button) {
                 // 跳转到RadioButton演示界面
                 intent = new Intent(mContext, RadioButtonActivity.class);
+            } else  if (id == R.id.btn_check_box) {
+                // 跳转到CheckBox演示界面
+                intent = new Intent(mContext, CheckBoxActivity.class);
             }
             startActivity(intent);
         }

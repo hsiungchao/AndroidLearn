@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".ui.CheckBoxActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_title"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_android"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_below="@id/tv_title"/>
+
+    <CheckBox
+        android:id="@+id/cb_ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_ios"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_below="@id/cb_android"/>
+
+    <CheckBox
+        android:id="@+id/cb_h5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_h5"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_below="@id/cb_ios"/>
+
+    <CheckBox
+        android:id="@+id/cb_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cb_other"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_below="@id/cb_h5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cb_other"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_result"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        <CheckBox
+            android:id="@+id/cb_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编程"
+            android:button="@drawable/bg_checkbox"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+        <CheckBox
+            android:id="@+id/cb_cook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="做饭"
+            android:button="@drawable/bg_checkbox"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

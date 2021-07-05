@@ -23,4 +23,16 @@
     <string name="rb_male">男</string>
     <string name="rb_female">女</string>
 
+    <!--CheckBoxActivity-->
+    <string name="tv_title">你会那些移动开发？</string>
+    <string name="cb_android">Android</string>
+    <string name="cb_ios">iOS</string>
+    <string name="cb_h5">H5</string>
+    <string name="cb_other">其它</string>
+    <string name="tv_result">你的兴趣：</string>
+    <string name="btn_image_view">ImageView</string>
+    <string name="btn_listview">ListView</string>
+    <string name="btn_gridview">GridView</string>
+    <string name="btn_recyclerview">RecyclerView</string>
+
 </resources>
