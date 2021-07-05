@@ -1,4 +1,4 @@
-package com.hsiung.androidlearn;
+package com.hsiung.androidlearn.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,14 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.hsiung.androidlearn.ui.ButtonActivity;
-import com.hsiung.androidlearn.ui.CheckBoxActivity;
-import com.hsiung.androidlearn.ui.EditTextActivity;
-import com.hsiung.androidlearn.ui.ImageViewActivity;
+import com.hsiung.androidlearn.R;
 import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
-import com.hsiung.androidlearn.ui.RadioButtonActivity;
-import com.hsiung.androidlearn.ui.TextViewActivity;
 import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
 
 public class UIFragment extends Fragment {
