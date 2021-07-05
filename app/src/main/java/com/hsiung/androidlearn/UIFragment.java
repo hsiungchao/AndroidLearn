@@ -17,6 +17,7 @@ import com.hsiung.androidlearn.ui.ButtonActivity;
 import com.hsiung.androidlearn.ui.CheckBoxActivity;
 import com.hsiung.androidlearn.ui.EditTextActivity;
 import com.hsiung.androidlearn.ui.ImageViewActivity;
+import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.RadioButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
@@ -37,6 +38,7 @@ public class UIFragment extends Fragment {
     private Button mBtnCheckBox;
     private Button mBtnImageView;
     private Button mBtnListView;
+    private Button mBtnGridView;
 
     public UIFragment() {
     }
@@ -76,6 +78,7 @@ public class UIFragment extends Fragment {
         mBtnCheckBox = view.findViewById(R.id.btn_check_box);
         mBtnImageView = view.findViewById(R.id.btn_image_view);
         mBtnListView = view.findViewById(R.id.btn_list_view);
+        mBtnGridView = view.findViewById(R.id.btn_grid_view);
 
         setListener();
     }
@@ -95,6 +98,7 @@ public class UIFragment extends Fragment {
         mBtnCheckBox.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
+        mBtnGridView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -123,6 +127,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_list_view) {
                 // 跳转到ListView演示界面
                 intent = new Intent(mContext, ListViewActivity.class);
+            } else if (id == R.id.btn_grid_view) {
+                // 跳转到GridView演示界面
+                intent = new Intent(mContext, GridViewActivity.class);
             }
             startActivity(intent);
         }

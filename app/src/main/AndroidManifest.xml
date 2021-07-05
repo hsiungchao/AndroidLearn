@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
-        <activity android:name=".ui.listview.ListViewActivity"></activity>
+        <activity android:name=".ui.gridview.GridViewActivity"></activity>
+        <activity android:name=".ui.listview.ListViewActivity" />
         <activity android:name=".ui.ImageViewActivity" />
         <activity android:name=".ui.CheckBoxActivity" />
         <activity android:name=".ui.RadioButtonActivity" />
