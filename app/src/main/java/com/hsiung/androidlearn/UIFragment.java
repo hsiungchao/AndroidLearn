@@ -21,6 +21,7 @@ import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.RadioButtonActivity;
 import com.hsiung.androidlearn.ui.TextViewActivity;
+import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
 
 public class UIFragment extends Fragment {
 
@@ -39,6 +40,7 @@ public class UIFragment extends Fragment {
     private Button mBtnImageView;
     private Button mBtnListView;
     private Button mBtnGridView;
+    private Button mBtnRecyclerView;
 
     public UIFragment() {
     }
@@ -79,6 +81,7 @@ public class UIFragment extends Fragment {
         mBtnImageView = view.findViewById(R.id.btn_image_view);
         mBtnListView = view.findViewById(R.id.btn_list_view);
         mBtnGridView = view.findViewById(R.id.btn_grid_view);
+        mBtnRecyclerView = view.findViewById(R.id.btn_recycler_view);
 
         setListener();
     }
@@ -99,6 +102,7 @@ public class UIFragment extends Fragment {
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
+        mBtnRecyclerView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -130,6 +134,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_grid_view) {
                 // 跳转到GridView演示界面
                 intent = new Intent(mContext, GridViewActivity.class);
+            } else if (id == R.id.btn_recycler_view) {
+                // 跳转到RecyclerView演示界面
+                intent = new Intent(mContext, RecyclerViewActivity.class);
             }
             startActivity(intent);
         }

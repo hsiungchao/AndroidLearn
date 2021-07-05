@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidLearn</string>
+    <string name="app_name">Learning</string>
     <string name="ui">UI</string>
 
     <!--TextViewActivity-->

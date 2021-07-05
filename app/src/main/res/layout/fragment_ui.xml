@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/globalPadding"
     tools:context=".UIFragment">
 
     <ScrollView
@@ -68,6 +69,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="GridView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView"
                 android:textAllCaps="false" />
 
         </LinearLayout>
