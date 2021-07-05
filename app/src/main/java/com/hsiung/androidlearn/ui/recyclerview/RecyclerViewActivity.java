@@ -50,7 +50,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 intent = new Intent(mContext, LinearRecyclerViewActivity.class);
             } else if (id == R.id.btn_horizontal) {
                 // 跳转到水平滚动视图演示界面
-
+                intent = new Intent(mContext, HorizontalRecyclerViewActivity.class);
             } else if (id == R.id.btn_grid) {
                 // 跳转到网格视图演示界面
 
