@@ -37,6 +37,7 @@ public class UIFragment extends Fragment {
     private Button mBtnGridView;
     private Button mBtnRecyclerView;
     private Button mBtnWebView;
+    private Button mBtnToast;
 
     public UIFragment() {
     }
@@ -79,7 +80,7 @@ public class UIFragment extends Fragment {
         mBtnGridView = view.findViewById(R.id.btn_grid_view);
         mBtnRecyclerView = view.findViewById(R.id.btn_recycler_view);
         mBtnWebView = view.findViewById(R.id.btn_web_view);
-
+        mBtnToast = view.findViewById(R.id.btn_toast);
         setListener();
     }
 
@@ -101,9 +102,10 @@ public class UIFragment extends Fragment {
         mBtnGridView.setOnClickListener(onClick);
         mBtnRecyclerView.setOnClickListener(onClick);
         mBtnWebView.setOnClickListener(onClick);
+        mBtnToast.setOnClickListener(onClick);
     }
 
-    private class OnClick implements View.OnClickListener{
+    private class OnClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             int id = v.getId();
@@ -111,16 +113,16 @@ public class UIFragment extends Fragment {
             if (id == R.id.btn_text_View) {
                 // 跳转到TextView演示界面
                 intent = new Intent(mContext, TextViewActivity.class);
-            } else  if (id == R.id.btn_button) {
+            } else if (id == R.id.btn_button) {
                 // 跳转到Button演示界面
                 intent = new Intent(mContext, ButtonActivity.class);
-            } else if (id == R.id.btn_edit_text){
+            } else if (id == R.id.btn_edit_text) {
                 // 跳转到EditText演示界面
                 intent = new Intent(mContext, EditTextActivity.class);
             } else if (id == R.id.btn_radio_button) {
                 // 跳转到RadioButton演示界面
                 intent = new Intent(mContext, RadioButtonActivity.class);
-            } else  if (id == R.id.btn_check_box) {
+            } else if (id == R.id.btn_check_box) {
                 // 跳转到CheckBox演示界面
                 intent = new Intent(mContext, CheckBoxActivity.class);
             } else if (id == R.id.btn_image_view) {
@@ -135,9 +137,12 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_recycler_view) {
                 // 跳转到RecyclerView演示界面
                 intent = new Intent(mContext, RecyclerViewActivity.class);
-            } else  if (id == R.id.btn_web_view) {
+            } else if (id == R.id.btn_web_view) {
                 // 跳转到WebView演示界面
                 intent = new Intent(mContext, WebViewActivity.class);
+            } else if (id == R.id.btn_toast) {
+                // 跳转到Toast演示界面
+                intent = new Intent(mContext, ToastActivity.class);
             }
             startActivity(intent);
         }
