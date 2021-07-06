@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/globalPadding">
+
+    <Button
+        android:id="@+id/btn_default_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Style"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_single_selection_dialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Selection Style1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_single_selection_dialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Selection Style2"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_multi_selection_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple Selection Style"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_customize_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customize Style"
+        android:textAllCaps="false" />
+</LinearLayout>

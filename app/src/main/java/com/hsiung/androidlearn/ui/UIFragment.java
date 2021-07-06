@@ -38,6 +38,7 @@ public class UIFragment extends Fragment {
     private Button mBtnRecyclerView;
     private Button mBtnWebView;
     private Button mBtnToast;
+    private Button mBtnDialog;
 
     public UIFragment() {
     }
@@ -81,6 +82,8 @@ public class UIFragment extends Fragment {
         mBtnRecyclerView = view.findViewById(R.id.btn_recycler_view);
         mBtnWebView = view.findViewById(R.id.btn_web_view);
         mBtnToast = view.findViewById(R.id.btn_toast);
+        mBtnDialog = view.findViewById(R.id.btn_dialog);
+
         setListener();
     }
 
@@ -103,6 +106,7 @@ public class UIFragment extends Fragment {
         mBtnRecyclerView.setOnClickListener(onClick);
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
+        mBtnDialog.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -143,6 +147,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_toast) {
                 // 跳转到Toast演示界面
                 intent = new Intent(mContext, ToastActivity.class);
+            } else if (id == R.id.btn_dialog) {
+                // 跳转到Dialog演示界面
+                intent = new Intent(mContext, AlertDialogActivity.class);
             }
             startActivity(intent);
         }
