@@ -39,6 +39,7 @@ public class UIFragment extends Fragment {
     private Button mBtnWebView;
     private Button mBtnToast;
     private Button mBtnDialog;
+    private Button mBtnProgress;
 
     public UIFragment() {
     }
@@ -83,6 +84,7 @@ public class UIFragment extends Fragment {
         mBtnWebView = view.findViewById(R.id.btn_web_view);
         mBtnToast = view.findViewById(R.id.btn_toast);
         mBtnDialog = view.findViewById(R.id.btn_dialog);
+        mBtnProgress = view.findViewById(R.id.btn_progress);
 
         setListener();
     }
@@ -107,6 +109,7 @@ public class UIFragment extends Fragment {
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
         mBtnDialog.setOnClickListener(onClick);
+        mBtnProgress.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -150,6 +153,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_dialog) {
                 // 跳转到Dialog演示界面
                 intent = new Intent(mContext, AlertDialogActivity.class);
+            } else if (id == R.id.btn_progress) {
+                // 跳转到Progress演示界面
+                intent = new Intent(mContext, ProgressActivity.class);
             }
             startActivity(intent);
         }

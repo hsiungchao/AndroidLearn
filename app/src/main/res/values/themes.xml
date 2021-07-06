@@ -16,4 +16,8 @@
     <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
 
     </style>
+
+    <style name="MyProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/bg_progress</item>
+    </style>
 </resources>
