@@ -5,40 +5,42 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.hsiung.androidlearn.R;
 
 /**
  * Author by hsiungchao, Email hsiungchao@163.com, Date on 2021/7/6.
  * PS: Not easy to write code, please indicate.
  */
-public class GridAdapter extends RecyclerView.Adapter<GridAdapter.GridViewHolder> {
+public class WaterfallsFlowAdapter extends RecyclerView.Adapter<WaterfallsFlowAdapter.WaterfallsFlowViewHolder> {
 
     private Context mContext;
     private OnItemClickListener mListener;
 
-    public GridAdapter(Context context, OnItemClickListener listener) {
+    public WaterfallsFlowAdapter(Context context, OnItemClickListener listener) {
         mContext = context;
         mListener = listener;
     }
 
     @NonNull
     @Override
-    public GridViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new GridViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_grid_item, parent, false));
+    public WaterfallsFlowViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new WaterfallsFlowViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_waterfalls_flow_item, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
-        // 赋值
-        holder.mTextView.setText("花");
-        Glide.with(mContext).load("https://img1.baidu.com/it/u=2870390419,1539547333&fm=26&fmt=auto&gp=0.jpg").into(holder.mImageView);
-        // 设置监听事件
+    public void onBindViewHolder(@NonNull WaterfallsFlowViewHolder holder, int position) {
+        if (position % 2 != 0) {
+            holder.mImageView.setImageResource(R.drawable.img1);
+//            Glide.with(mContext).load(R.drawable.img1).into(holder.mImageView);
+        } else {
+            holder.mImageView.setImageResource(R.drawable.image2);
+//            Glide.with(mContext).load(R.drawable.image2).into(holder.mImageView);
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,24 +49,18 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.GridViewHolder
         });
     }
 
-
     @Override
     public int getItemCount() {
         return 30;
     }
 
-    class GridViewHolder extends RecyclerView.ViewHolder{
-
+    class WaterfallsFlowViewHolder extends RecyclerView.ViewHolder {
         private ImageView mImageView;
-        private TextView mTextView;
-
-        public GridViewHolder(@NonNull View itemView) {
+        public WaterfallsFlowViewHolder(@NonNull View itemView) {
             super(itemView);
-            mImageView = itemView.findViewById(R.id.iv_grid);
-            mTextView = itemView.findViewById(R.id.tv_grid_title);
+            mImageView = itemView.findViewById(R.id.iv_waterfalls_flow);
         }
     }
-
 
     public interface OnItemClickListener {
         void onClick(int position);

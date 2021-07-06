@@ -57,6 +57,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 intent = new Intent(mContext, GridRecyclerViewActivity.class);
             } else if (id == R.id.btn_waterfalls_flow) {
                 // 跳转到瀑布流视图演示界面
+                intent = new Intent(mContext, WaterfallsFlowRecyclerViewActivity.class);
             }
             startActivity(intent);
         }
