@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.hsiung.androidlearn.R;
+import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
@@ -44,7 +45,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = null;
-            int id  = v.getId();
+            int id = v.getId();
             if (id == R.id.btn_linear) {
                 // 跳转到列表视图演示界面
                 intent = new Intent(mContext, LinearRecyclerViewActivity.class);
@@ -53,7 +54,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 intent = new Intent(mContext, HorizontalRecyclerViewActivity.class);
             } else if (id == R.id.btn_grid) {
                 // 跳转到网格视图演示界面
-
+                intent = new Intent(mContext, GridRecyclerViewActivity.class);
             } else if (id == R.id.btn_waterfalls_flow) {
                 // 跳转到瀑布流视图演示界面
             }
