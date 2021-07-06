@@ -23,6 +23,7 @@ public class WaterfallsFlowAdapter extends RecyclerView.Adapter<WaterfallsFlowAd
     public WaterfallsFlowAdapter(Context context, OnItemClickListener listener) {
         mContext = context;
         mListener = listener;
+
     }
 
     @NonNull

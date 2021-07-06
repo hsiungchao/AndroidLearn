@@ -36,6 +36,7 @@ public class UIFragment extends Fragment {
     private Button mBtnListView;
     private Button mBtnGridView;
     private Button mBtnRecyclerView;
+    private Button mBtnWebView;
 
     public UIFragment() {
     }
@@ -77,6 +78,7 @@ public class UIFragment extends Fragment {
         mBtnListView = view.findViewById(R.id.btn_list_view);
         mBtnGridView = view.findViewById(R.id.btn_grid_view);
         mBtnRecyclerView = view.findViewById(R.id.btn_recycler_view);
+        mBtnWebView = view.findViewById(R.id.btn_web_view);
 
         setListener();
     }
@@ -98,6 +100,7 @@ public class UIFragment extends Fragment {
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
         mBtnRecyclerView.setOnClickListener(onClick);
+        mBtnWebView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -132,6 +135,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_recycler_view) {
                 // 跳转到RecyclerView演示界面
                 intent = new Intent(mContext, RecyclerViewActivity.class);
+            } else  if (id == R.id.btn_web_view) {
+                // 跳转到WebView演示界面
+                intent = new Intent(mContext, WebViewActivity.class);
             }
             startActivity(intent);
         }
