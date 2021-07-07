@@ -120,6 +120,13 @@
                 android:text="PopWindow"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_activity_lifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ActivityLifecycle"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 

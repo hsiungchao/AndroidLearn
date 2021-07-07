@@ -42,6 +42,7 @@ public class UIFragment extends Fragment {
     private Button mBtnProgress;
     private Button mBtnCustomDialog;
     private Button mBtnPopupWindow;
+    private Button mBtnLifecycle;
 
     public UIFragment() {
     }
@@ -89,6 +90,7 @@ public class UIFragment extends Fragment {
         mBtnProgress = view.findViewById(R.id.btn_progress);
         mBtnCustomDialog = view.findViewById(R.id.btn_custom_dialog);
         mBtnPopupWindow = view.findViewById(R.id.btn_popup_window);
+        mBtnLifecycle = view.findViewById(R.id.btn_activity_lifecycle);
 
         setListener();
     }
@@ -116,6 +118,7 @@ public class UIFragment extends Fragment {
         mBtnProgress.setOnClickListener(onClick);
         mBtnCustomDialog.setOnClickListener(onClick);
         mBtnPopupWindow.setOnClickListener(onClick);
+        mBtnLifecycle.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -169,6 +172,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_popup_window) {
                 // 跳转到PopWindow演示界面
                 intent = new Intent(mContext, PopupWindowActivity.class);
+            } else if (id == R.id.btn_activity_lifecycle) {
+                // 跳转到Lifecycle演示界面
+                intent = new Intent(mContext, LifecycleActivity.class);
             }
             startActivity(intent);
         }
