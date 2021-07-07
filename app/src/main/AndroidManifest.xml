@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
+        <activity android:name=".ui.actionbar.ToolBarActivity"></activity>
+        <activity android:name=".ui.fragment.ContainerActivity" />
         <activity
             android:name=".ui.jump.Test2Activity"
             android:launchMode="singleTop">

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/globalPadding">
+
+    <!--这里是代替actionbar的，可以设置在BaseActivity中通用，然后include进来-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="vertical">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btn_hide_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hide ToolBar"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_show_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show ToolBar"
+        android:textAllCaps="false" />
+
+</LinearLayout>

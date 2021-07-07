@@ -53,10 +53,13 @@ public class HomeActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.nav_ui) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mUIFragment).commitAllowingStateLoss();
+                    mToolbar.setTitle(R.string.ui);
                 } else if (id == R.id.nav_event) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mEventFragment).commitAllowingStateLoss();
+                    mToolbar.setTitle(R.string.event);
                 } else if (id == R.id.nav_third_party_lab) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mLibFragment).commitAllowingStateLoss();
+                    mToolbar.setTitle(R.string.third_party_lab);
                 }
                 return true;
             }

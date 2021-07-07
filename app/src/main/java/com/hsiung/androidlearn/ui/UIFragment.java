@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.hsiung.androidlearn.R;
+import com.hsiung.androidlearn.ui.actionbar.ToolBarActivity;
+import com.hsiung.androidlearn.ui.fragment.ContainerActivity;
 import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 import com.hsiung.androidlearn.ui.jump.Test1Activity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
@@ -45,6 +47,8 @@ public class UIFragment extends Fragment {
     private Button mBtnPopupWindow;
     private Button mBtnLifecycle;
     private Button mBtnActivityJump;
+    private Button mBtnFragment;
+    private Button mBtnToolBar;
 
     public UIFragment() {
     }
@@ -94,7 +98,8 @@ public class UIFragment extends Fragment {
         mBtnPopupWindow = view.findViewById(R.id.btn_popup_window);
         mBtnLifecycle = view.findViewById(R.id.btn_activity_lifecycle);
         mBtnActivityJump = view.findViewById(R.id.btn_activity_jump);
-
+        mBtnFragment = view.findViewById(R.id.btn_fragment);
+        mBtnToolBar = view.findViewById(R.id.btn_tool_bar);
         setListener();
     }
 
@@ -123,6 +128,8 @@ public class UIFragment extends Fragment {
         mBtnPopupWindow.setOnClickListener(onClick);
         mBtnLifecycle.setOnClickListener(onClick);
         mBtnActivityJump.setOnClickListener(onClick);
+        mBtnFragment.setOnClickListener(onClick);
+        mBtnToolBar.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -182,6 +189,12 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_activity_jump) {
                 // 跳转到Activity Jump演示界面
                 intent = new Intent(mContext, Test1Activity.class);
+            } else if (id == R.id.btn_fragment) {
+                // 跳转到Fragment演示界面
+                intent = new Intent(mContext, ContainerActivity.class);
+            } else if (id == R.id.btn_tool_bar) {
+                // 跳转到ToolBar演示界面
+                intent = new Intent(mContext, ToolBarActivity.class);
             }
             startActivity(intent);
         }
