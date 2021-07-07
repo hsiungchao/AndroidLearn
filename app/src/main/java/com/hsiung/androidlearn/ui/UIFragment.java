@@ -41,6 +41,7 @@ public class UIFragment extends Fragment {
     private Button mBtnDialog;
     private Button mBtnProgress;
     private Button mBtnCustomDialog;
+    private Button mBtnPopupWindow;
 
     public UIFragment() {
     }
@@ -87,6 +88,7 @@ public class UIFragment extends Fragment {
         mBtnDialog = view.findViewById(R.id.btn_dialog);
         mBtnProgress = view.findViewById(R.id.btn_progress);
         mBtnCustomDialog = view.findViewById(R.id.btn_custom_dialog);
+        mBtnPopupWindow = view.findViewById(R.id.btn_popup_window);
 
         setListener();
     }
@@ -113,11 +115,13 @@ public class UIFragment extends Fragment {
         mBtnDialog.setOnClickListener(onClick);
         mBtnProgress.setOnClickListener(onClick);
         mBtnCustomDialog.setOnClickListener(onClick);
+        mBtnPopupWindow.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
+
             int id = v.getId();
             Intent intent = null;
             if (id == R.id.btn_text_View) {
@@ -162,6 +166,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_custom_dialog) {
                 // 跳转到CustomDialog演示界面
                 intent = new Intent(mContext, CustomDialogActivity.class);
+            } else if (id == R.id.btn_popup_window) {
+                // 跳转到PopWindow演示界面
+                intent = new Intent(mContext, PopupWindowActivity.class);
             }
             startActivity(intent);
         }

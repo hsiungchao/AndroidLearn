@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
-        <activity android:name=".ui.CustomDialogActivity"></activity>
+        <activity android:name=".ui.PopupWindowActivity"></activity>
+        <activity android:name=".ui.CustomDialogActivity" />
         <activity android:name=".ui.ProgressActivity" />
         <activity android:name=".ui.AlertDialogActivity" />
         <activity android:name=".ui.ToastActivity" />
