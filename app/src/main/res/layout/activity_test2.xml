@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/globalPadding">
+
+    <TextView
+        android:id="@+id/tv_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="finish"
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:id="@+id/btn_start_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Mode"
+        android:textAllCaps="false"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+</LinearLayout>

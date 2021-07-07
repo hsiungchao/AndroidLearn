@@ -127,6 +127,13 @@
                 android:text="ActivityLifecycle"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_activity_jump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ActivityJump"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 

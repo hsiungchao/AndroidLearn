@@ -11,7 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
-        <activity android:name=".ui.LifecycleActivity"></activity>
+        <activity
+            android:name=".ui.jump.Test2Activity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.CUSTOM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.jump.Test1Activity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.LifecycleActivity" />
         <activity android:name=".ui.PopupWindowActivity" />
         <activity android:name=".ui.CustomDialogActivity" />
         <activity android:name=".ui.ProgressActivity" />

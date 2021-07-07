@@ -15,6 +15,7 @@ import android.widget.Button;
 
 import com.hsiung.androidlearn.R;
 import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
+import com.hsiung.androidlearn.ui.jump.Test1Activity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
 
@@ -43,6 +44,7 @@ public class UIFragment extends Fragment {
     private Button mBtnCustomDialog;
     private Button mBtnPopupWindow;
     private Button mBtnLifecycle;
+    private Button mBtnActivityJump;
 
     public UIFragment() {
     }
@@ -91,6 +93,7 @@ public class UIFragment extends Fragment {
         mBtnCustomDialog = view.findViewById(R.id.btn_custom_dialog);
         mBtnPopupWindow = view.findViewById(R.id.btn_popup_window);
         mBtnLifecycle = view.findViewById(R.id.btn_activity_lifecycle);
+        mBtnActivityJump = view.findViewById(R.id.btn_activity_jump);
 
         setListener();
     }
@@ -119,6 +122,7 @@ public class UIFragment extends Fragment {
         mBtnCustomDialog.setOnClickListener(onClick);
         mBtnPopupWindow.setOnClickListener(onClick);
         mBtnLifecycle.setOnClickListener(onClick);
+        mBtnActivityJump.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -175,6 +179,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_activity_lifecycle) {
                 // 跳转到Lifecycle演示界面
                 intent = new Intent(mContext, LifecycleActivity.class);
+            } else if (id == R.id.btn_activity_jump) {
+                // 跳转到Activity Jump演示界面
+                intent = new Intent(mContext, Test1Activity.class);
             }
             startActivity(intent);
         }
