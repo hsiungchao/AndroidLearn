@@ -38,5 +38,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="third_party_lab">Third-party Lib</string>
     <string name="event">Event</string>
+    <string name="navigationContentDescription">返回</string>
 
 </resources>

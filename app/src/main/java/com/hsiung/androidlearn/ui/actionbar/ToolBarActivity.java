@@ -33,25 +33,17 @@ public class ToolBarActivity extends AppCompatActivity {
 
         setListener();
 
-        //隐藏默认actionbar
-        ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null){
-            actionBar.hide();
-        }
-
         //获取toolbar
         mToolbar = findViewById(R.id.toolbar);
         //主标题，必须在setSupportActionBar之前设置，否则无效，如果放在其他位置，则直接setTitle即可
         mToolbar.setTitle("ToolBar Title");
-        //用toolbar替换actionbar
-        setSupportActionBar(mToolbar);
+
 
         //副标题+颜色
         mToolbar.setSubtitle("Sub Title");
 
-        //左侧按钮：可见+更换图标+点击监听
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//显示toolbar的返回按钮
-//        toolBar.setNavigationIcon(R.mipmap.back_white);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        mToolbar.setNavigationContentDescription(R.string.navigationContentDescription);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,41 +51,61 @@ public class ToolBarActivity extends AppCompatActivity {
             }
         });
         //设置logo
-//        mToolbar.setLogo(android.R.mipmap.sym_def_app_icon);
+        mToolbar.setLogo(android.R.mipmap.sym_def_app_icon);
 
+        // 添加菜单
+        mToolbar.inflateMenu(R.menu.menu);
+
+        // 设置ToolBar菜单栏的监听事件
+        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+                ToastUtil.showMsg(mContext, "Add selected");
+//                if (id == R.id.action_refresh) {
+//                    ToastUtil.showMsg(mContext, "Refresh selected");
+//                }
+//                else if (id == R.id.action_add) {
+//                    ToastUtil.showMsg(mContext, "Add selected");
+//                } else if (id == R.id.action_settings) {
+//                    ToastUtil.showMsg(mContext, "Settings selected");
+//                }
+                return true;
+            }
+        });
     }
 
     /**
      * 复写：添加菜单布局
-     * */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
+     */
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu, menu);
+//        return true;
+//    }
 
-    /**
-     * 复写：设置菜单监听
-     * */
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_refresh:
-                ToastUtil.showMsg(mContext, "Refresh selected");
-                break;
-            case R.id.action_add:
-                ToastUtil.showMsg(mContext, "Add selected");
-                break;
-            case R.id.action_settings:
-                ToastUtil.showMsg(mContext, "Settings selected");
-                break;
-            default:
-                break;
-        }
-        return true;
-    }
 
+//    /**
+//     * 复写：设置菜单监听
+//     * */
+//    @SuppressLint("NonConstantResourceId")
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.action_refresh:
+//                ToastUtil.showMsg(mContext, "Refresh selected");
+//                break;
+//            case R.id.action_add:
+//                ToastUtil.showMsg(mContext, "Add selected");
+//                break;
+//            case R.id.action_settings:
+//                ToastUtil.showMsg(mContext, "Settings selected");
+//                break;
+//            default:
+//                break;
+//        }
+//        return true;
+//    }
     private void setListener() {
         OnClick onClick = new OnClick();
         mBtnHide.setOnClickListener(onClick);

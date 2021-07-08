@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,7 +18,7 @@ import com.hsiung.androidlearn.ui.UIFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Context mContext = this;
+    private final Context mContext = this;
     private UIFragment mUIFragment;
     private EventFragment mEventFragment;
     private ThirdPartyLibFragment mLibFragment;
@@ -39,18 +40,28 @@ public class HomeActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.fl_container, mUIFragment).commitAllowingStateLoss();
 
         // 隐藏默认的ActionBar
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.hide();
-        }
+//        ActionBar actionBar = getSupportActionBar();
+//        if (actionBar != null) {
+//            actionBar.hide();
+//        }
 
+        // ToolBar的设置
         mToolbar = findViewById(R.id.toolbar);
+        mToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        // 设置NavigationIcon的点击事件
+//        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+
+
         mTvToolBarTitle = findViewById(R.id.tv_toolbar_title);
         mTvToolBarTitle.setText(R.string.ui);
 
-//        mToolbar.setTitle(R.string.ui);
-//        setSupportActionBar(mToolbar);
 
+        // BottomNavigationView设置
         mNavigationView = findViewById(R.id.nav_bottom_navigation);
         mNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -59,15 +70,12 @@ public class HomeActivity extends AppCompatActivity {
                 if (id == R.id.nav_ui) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mUIFragment).commitAllowingStateLoss();
                     mTvToolBarTitle.setText(R.string.ui);
-//                    mToolbar.setTitle(R.string.ui);
                 } else if (id == R.id.nav_event) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mEventFragment).commitAllowingStateLoss();
                     mTvToolBarTitle.setText(R.string.event);
-//                    mToolbar.setTitle(R.string.event);
                 } else if (id == R.id.nav_third_party_lab) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mLibFragment).commitAllowingStateLoss();
                     mTvToolBarTitle.setText(R.string.third_party_lab);
-//                    mToolbar.setTitle(R.string.third_party_lab);
                 }
                 return true;
             }
