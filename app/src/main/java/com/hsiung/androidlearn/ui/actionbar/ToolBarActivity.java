@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,7 +17,7 @@ import com.hsiung.androidlearn.util.ToastUtil;
 
 public class ToolBarActivity extends AppCompatActivity {
 
-    private Context mContext = this;
+    private final Context mContext = this;
 
     private Toolbar mToolbar;
     private Button mBtnHide;
@@ -30,10 +31,7 @@ public class ToolBarActivity extends AppCompatActivity {
         mBtnHide = findViewById(R.id.btn_hide_toolbar);
         mBtnShow = findViewById(R.id.btn_show_toolbar);
 
-        OnClick onClick = new OnClick();
-
-        mBtnHide.setOnClickListener(onClick);
-        mBtnShow.setOnClickListener(onClick);
+        setListener();
 
         //隐藏默认actionbar
         ActionBar actionBar = getSupportActionBar();
@@ -53,7 +51,7 @@ public class ToolBarActivity extends AppCompatActivity {
 
         //左侧按钮：可见+更换图标+点击监听
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//显示toolbar的返回按钮
-        //toolBar.setNavigationIcon(R.mipmap.back_white);
+//        toolBar.setNavigationIcon(R.mipmap.back_white);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +75,7 @@ public class ToolBarActivity extends AppCompatActivity {
     /**
      * 复写：设置菜单监听
      * */
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -93,6 +92,12 @@ public class ToolBarActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    private void setListener() {
+        OnClick onClick = new OnClick();
+        mBtnHide.setOnClickListener(onClick);
+        mBtnShow.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hsiung.androidlearn.event.EventFragment;
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private ThirdPartyLibFragment mLibFragment;
 
     private Toolbar mToolbar;
+    private TextView mTvToolBarTitle;
     private BottomNavigationView mNavigationView;
 
     @Override
@@ -43,8 +45,11 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setTitle(R.string.ui);
-        setSupportActionBar(mToolbar);
+        mTvToolBarTitle = findViewById(R.id.tv_toolbar_title);
+        mTvToolBarTitle.setText(R.string.ui);
+
+//        mToolbar.setTitle(R.string.ui);
+//        setSupportActionBar(mToolbar);
 
         mNavigationView = findViewById(R.id.nav_bottom_navigation);
         mNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -53,13 +58,16 @@ public class HomeActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.nav_ui) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mUIFragment).commitAllowingStateLoss();
-                    mToolbar.setTitle(R.string.ui);
+                    mTvToolBarTitle.setText(R.string.ui);
+//                    mToolbar.setTitle(R.string.ui);
                 } else if (id == R.id.nav_event) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mEventFragment).commitAllowingStateLoss();
-                    mToolbar.setTitle(R.string.event);
+                    mTvToolBarTitle.setText(R.string.event);
+//                    mToolbar.setTitle(R.string.event);
                 } else if (id == R.id.nav_third_party_lab) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_container, mLibFragment).commitAllowingStateLoss();
-                    mToolbar.setTitle(R.string.third_party_lab);
+                    mTvToolBarTitle.setText(R.string.third_party_lab);
+//                    mToolbar.setTitle(R.string.third_party_lab);
                 }
                 return true;
             }
