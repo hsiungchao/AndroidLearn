@@ -11,7 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
-        <activity android:name=".ui.actionbar.ToolBarActivity"></activity>
+        <activity
+            android:name=".ui.statusbar.StatusBarActivity"
+            android:theme="@style/Theme.StatusActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.actionbar.ToolBarActivity" />
         <activity android:name=".ui.fragment.ContainerActivity" />
         <activity
             android:name=".ui.jump.Test2Activity"
@@ -46,11 +55,7 @@
         <activity android:name=".ui.ButtonActivity" />
         <activity android:name=".ui.TextViewActivity" />
         <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

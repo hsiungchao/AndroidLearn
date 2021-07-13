@@ -75,37 +75,7 @@ public class ToolBarActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * 复写：添加菜单布局
-     */
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu, menu);
-//        return true;
-//    }
 
-
-//    /**
-//     * 复写：设置菜单监听
-//     * */
-//    @SuppressLint("NonConstantResourceId")
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_refresh:
-//                ToastUtil.showMsg(mContext, "Refresh selected");
-//                break;
-//            case R.id.action_add:
-//                ToastUtil.showMsg(mContext, "Add selected");
-//                break;
-//            case R.id.action_settings:
-//                ToastUtil.showMsg(mContext, "Settings selected");
-//                break;
-//            default:
-//                break;
-//        }
-//        return true;
-//    }
     private void setListener() {
         OnClick onClick = new OnClick();
         mBtnHide.setOnClickListener(onClick);

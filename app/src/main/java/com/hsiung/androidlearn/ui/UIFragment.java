@@ -20,6 +20,7 @@ import com.hsiung.androidlearn.ui.gridview.GridViewActivity;
 import com.hsiung.androidlearn.ui.jump.Test1Activity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
+import com.hsiung.androidlearn.ui.statusbar.StatusBarActivity;
 
 public class UIFragment extends Fragment {
 
@@ -49,6 +50,7 @@ public class UIFragment extends Fragment {
     private Button mBtnActivityJump;
     private Button mBtnFragment;
     private Button mBtnToolBar;
+    private Button mBtnStatusBar;
 
     public UIFragment() {
     }
@@ -100,6 +102,7 @@ public class UIFragment extends Fragment {
         mBtnActivityJump = view.findViewById(R.id.btn_activity_jump);
         mBtnFragment = view.findViewById(R.id.btn_fragment);
         mBtnToolBar = view.findViewById(R.id.btn_tool_bar);
+        mBtnStatusBar = view.findViewById(R.id.btn_status_bar);
         setListener();
     }
 
@@ -130,6 +133,7 @@ public class UIFragment extends Fragment {
         mBtnActivityJump.setOnClickListener(onClick);
         mBtnFragment.setOnClickListener(onClick);
         mBtnToolBar.setOnClickListener(onClick);
+        mBtnStatusBar.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -195,6 +199,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_tool_bar) {
                 // 跳转到ToolBar演示界面
                 intent = new Intent(mContext, ToolBarActivity.class);
+            } else if (id == R.id.btn_status_bar) {
+                // 跳转到StatusBar演示界面
+                intent = new Intent(mContext, StatusBarActivity.class);
             }
             startActivity(intent);
         }
