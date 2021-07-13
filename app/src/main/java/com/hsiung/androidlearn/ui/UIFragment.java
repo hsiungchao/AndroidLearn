@@ -22,6 +22,7 @@ import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
 import com.hsiung.androidlearn.ui.statusbar.StatusBarActivity;
 import com.hsiung.androidlearn.ui.tablayput.TabLayoutActivity;
+import com.hsiung.androidlearn.ui.tablayput.ViewPager2Activity;
 
 public class UIFragment extends Fragment {
 
