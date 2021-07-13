@@ -21,6 +21,7 @@ import com.hsiung.androidlearn.ui.jump.Test1Activity;
 import com.hsiung.androidlearn.ui.listview.ListViewActivity;
 import com.hsiung.androidlearn.ui.recyclerview.RecyclerViewActivity;
 import com.hsiung.androidlearn.ui.statusbar.StatusBarActivity;
+import com.hsiung.androidlearn.ui.tablayput.TabLayoutActivity;
 
 public class UIFragment extends Fragment {
 
@@ -51,6 +52,7 @@ public class UIFragment extends Fragment {
     private Button mBtnFragment;
     private Button mBtnToolBar;
     private Button mBtnStatusBar;
+    private Button mBtnTabLayout;
 
     public UIFragment() {
     }
@@ -103,6 +105,7 @@ public class UIFragment extends Fragment {
         mBtnFragment = view.findViewById(R.id.btn_fragment);
         mBtnToolBar = view.findViewById(R.id.btn_tool_bar);
         mBtnStatusBar = view.findViewById(R.id.btn_status_bar);
+        mBtnTabLayout = view.findViewById(R.id.btn_tab_layout);
         setListener();
     }
 
@@ -134,6 +137,7 @@ public class UIFragment extends Fragment {
         mBtnFragment.setOnClickListener(onClick);
         mBtnToolBar.setOnClickListener(onClick);
         mBtnStatusBar.setOnClickListener(onClick);
+        mBtnTabLayout.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -202,6 +206,9 @@ public class UIFragment extends Fragment {
             } else if (id == R.id.btn_status_bar) {
                 // 跳转到StatusBar演示界面
                 intent = new Intent(mContext, StatusBarActivity.class);
+            } else if (id == R.id.btn_tab_layout) {
+                // 跳转到TabLayout演示界面
+                intent = new Intent(mContext, TabLayoutActivity.class);
             }
             startActivity(intent);
         }

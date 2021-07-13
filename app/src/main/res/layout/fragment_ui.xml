@@ -155,6 +155,13 @@
                 android:text="StatusBar"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TabLayout"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
