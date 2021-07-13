@@ -12,6 +12,9 @@ public class StatusBarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status_bar);
 
@@ -21,8 +24,7 @@ public class StatusBarActivity extends AppCompatActivity {
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         // 全屏布局，不隐藏状态栏：
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
 
         /*
