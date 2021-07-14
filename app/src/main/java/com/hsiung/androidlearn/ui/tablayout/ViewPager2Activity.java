@@ -1,4 +1,4 @@
-package com.hsiung.androidlearn.ui.tablayput;
+package com.hsiung.androidlearn.ui.tablayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;

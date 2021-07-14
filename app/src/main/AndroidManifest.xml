@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoActionBar">
-        <activity android:name=".ui.tablayput.TabLayoutActivity"></activity>
-        <activity android:name=".ui.tablayput.ViewPager2Activity"></activity>
+        <activity android:name=".ui.tablayout.ViewPager2WithTabLayoutActivity"></activity>
+        <activity android:name=".ui.tablayout.ViewPager2WithFragmentActivity" />
+        <activity android:name=".ui.tablayout.TabLayoutActivity" />
+        <activity android:name=".ui.tablayout.ViewPager2Activity" />
         <activity
             android:name=".ui.statusbar.StatusBarActivity"
             android:theme="@style/Theme.StatusActivity" />

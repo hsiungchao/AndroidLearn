@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.tablayout.ViewPager2Activity">
+    tools:context=".ui.tablayout.ViewPager2WithFragmentActivity">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp2_tab_layout"
+        android:id="@+id/vp2_view_pager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"/>
-
+        android:orientation="horizontal" />
 
 </LinearLayout>
